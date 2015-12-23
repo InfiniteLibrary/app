@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+
 var Vue = require('vue');
 var App = require('../components/app.vue');
 
