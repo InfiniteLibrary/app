@@ -29,6 +29,13 @@ module.exports = {
     ],
   },
 
+  vue: {
+    loaders: {
+      scss: 'style!css!sass',
+      exclude: /node_modules|\.tmp|vendor/
+    }
+  },
+
   node: {
     console: true,
   },
