@@ -1,13 +1,16 @@
 <template lang="jade">
-  div
-    h1 Hello from vue js!
-    component-a
+app-bar
+app-content
 </template>
 
 <script>
-import ComponentA from "./ComponentA.vue"
+import AppBar from "./AppBar.vue";
+import AppContent from "./AppContent.vue";
 
 export default {
-  components: { ComponentA }
+  components: {
+    AppBar,
+    AppContent
+  }
 }
 </script>
