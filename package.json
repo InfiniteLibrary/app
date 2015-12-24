@@ -15,6 +15,9 @@
     "url": "https://github.com/Instrument/middleman-template-instrument"
   },
   "homepage": "https://github.com/Instrument/middleman-template-instrument#readme",
+  "dependencies": {
+    "vue": "^1.0.0"
+  },
   "devDependencies": {
     "babel": "^6.1.18",
     "babel-core": "^6.1.21",
