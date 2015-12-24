@@ -1,9 +1,13 @@
-<template>
-  <div class="app">
-    <h1>Hello from Vue.js</h1>
-  </div>
+<template lang="jade">
+  div
+    h1 Hello from vue js!
+    component-a
 </template>
 
 <script>
+import ComponentA from "./ComponentA.vue"
 
+export default {
+  components: { ComponentA }
+}
 </script>
