@@ -15,8 +15,11 @@ $top-bar-height: 2.5rem;
 
 <template lang="jade">
 .app-bar
-  span Vue JS Top Bar
+  span {{ msg }}
 </template>
 
 <script>
+export default {
+  props: ['msg']
+}
 </script>

@@ -32,7 +32,7 @@ $body-text-size: 1.25em;
 <template lang="jade">
 .app-content
   .content-header
-    h1 Welcome to Vue.js
+    h1 {{ message }}
   .content-body
     p.
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
@@ -47,4 +47,11 @@ $body-text-size: 1.25em;
 </template>
 
 <script>
+export default {
+  data() {
+    return {
+      message: "Hello world!"
+    }
+  }
+}
 </script>

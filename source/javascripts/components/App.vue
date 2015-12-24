@@ -1,5 +1,7 @@
 <template lang="jade">
-.example {{ msg }}
+#app
+  app-bar(msg = "This is passed from the parent")
+  app-content
 </template>
 
 <script>
@@ -7,9 +9,9 @@ import AppBar from "./AppBar.vue";
 import AppContent from "./AppContent.vue";
 
 export default {
-  // components: {
-    // AppBar,
-    // AppContent
-  // }
+  components: {
+    AppBar,
+    AppContent
+  }
 }
 </script>
