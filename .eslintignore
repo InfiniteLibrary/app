@@ -2,3 +2,4 @@ node_modules/**
 source/javascripts/vendor/**
 webpack.config.js
 .tmp/**
+source/javascripts/all.js
