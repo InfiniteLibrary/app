@@ -1,19 +1,25 @@
 <style lang="scss" scoped>
 #search { 
-	display: inline-block;
-	width: 49%;
-	text-align: right;
-	input { 
-		border-radius: 20px; 
-		padding-left: 10px;
-	} 
+	#searchControls { 
+		position: absolute; 
+		top: 140px;
+		right: 20px;
+	       input { 
+		       border-radius: 20px; 
+		       padding-left: 10px;
+	       } 
+	       button { 
+		       font-size: 12px;
+	       } 
+	}
 } 
 </style>
 
 <template lang="jade">
 #search
-  input
-  button(@click="fetchData") Search GITenberg!
+  #searchControls
+    input
+    button(@click="fetchData") Search GITenberg!
   ul
     li(v-for="result in results")
       a(v-link="{ name: 'bookinfo', params: { bookID: result.name }}")
