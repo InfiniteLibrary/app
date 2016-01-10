@@ -62,8 +62,10 @@ $secondary-color: #333;
 <template>
   <div class="il-reader">
 
+    <a v-on:click="toggleToc">toggle Toc</a>
+
     <div class="contents">
-      <reader-contents :items="toc" :index.sync="curr"/>
+      <reader-contents :items="toc" :index.sync="curr" v-show="showToc"/>
     </div>
 
     <div class="container">
@@ -96,7 +98,8 @@ export default {
     return {
       content: '',
       curr: 0,
-      toc: []
+      toc: [],
+      showToc: false
     }
   },
 
@@ -155,6 +158,9 @@ export default {
       if(this.curr > 0){
         this.curr -= 1;
       }
+    },
+    toggleToc: function (argument) {
+      this.showToc = !this.showToc;
     }
   }
 }
