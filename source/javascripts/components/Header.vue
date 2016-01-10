@@ -12,23 +12,21 @@
 </style>
 
 <template>
-<div class="header">
-  <img class="logo"/>
-  <h1>This is the header</h1>
-  <h2>App description</h2>
-</div>
+<banner/>
+<search/>
+<app-nav/>
 </template>
 
 <script>
 import Banner from "./Banner.vue";
 import Search from "./Search.vue";
-import Nav from "./Nav.vue";
+import AppNav from "./AppNav.vue";
 
 export default {
   components: {
     Banner,
     Search,
-    Nav
+    AppNav
   }
 }
 </script>
