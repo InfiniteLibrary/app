@@ -25,6 +25,7 @@
   ul
     li(v-for="result in results")
       a(v-link="{ name: 'bookinfo', params: { bookID: result.name }}")
+         img(src="https://raw.githubusercontent.com/InfiniteLibraryLibrary/{{ result.name }}/master/cover.jpg")
          h3 {{ result.name }}
       p {{ result.description }}
 </template>
