@@ -11,7 +11,8 @@
   button(@click="fetchData") Search GITenberg!
   ul
     li(v-for="result in results")
-      h3 {{ result.id }} | {{ result.name }}
+      a(v-link="{ name: 'bookinfo', params: { bookID: result.name }}")
+         h3 {{ result.name }}
       p {{ result.description }}
 </template>
 
