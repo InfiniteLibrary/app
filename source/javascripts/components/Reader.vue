@@ -1,12 +1,39 @@
 <style lang="scss" scoped>
+
+$secondary-color: #333;
+
+.il-reader {
+  .nav {
+    text-align: center;
+    color: $secondary-color;
+  }
+
+  .container {
+    margin: 0 auto;
+
+    @media screen and (max-width: $break-small) {
+      width: auto;
+    }
+    @media screen and (min-width: $break-large) {
+      width: 600px;
+    }
+  }
+}
 </style>
 
 <template>
   <div class="il-reader">
-    <a v-on:click="prev">prev</a> | <a v-on:click="next">next</a>
+    <div class="nav">
+      <a v-on:click="prev">prev</a> | <a v-on:click="next">next</a>
+    </div>
 
-    <view :content="content"></div>
+    <div class="container">
+      <view :content="content"/>
+    </div>
 
+    <div class="nav">
+      <a v-on:click="prev">prev</a> | <a v-on:click="next">next</a>
+    </div>
   </div>
 </template>
 
