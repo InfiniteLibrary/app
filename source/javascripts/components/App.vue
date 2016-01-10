@@ -1,21 +1,21 @@
-<template lang="jade">
-#app
-  app-bar(msg = "This is passed from the parent")
-  search
-  router-view
+<template>
+<div id="app">
+  <app-header/>
+  <app-content/>
+  <app-footer/>
+</div>
 </template>
 
 <script>
-import AppBar from "./AppBar.vue";
+import AppHeader from "./Header.vue";
 import AppContent from "./AppContent.vue";
-import Search from "./Search.vue";
-import Reader from "./Reader.vue";
+import AppFooter from "./Footer.vue";
 
 export default {
   components: {
-    AppBar,
-    Search,
-    AppContent
+    AppHeader,
+    AppContent,
+    AppFooter
   }
 }
 </script>
