@@ -7,7 +7,8 @@
   background-image: url('/images/expanded-bookmark-bottom.png');
   background-position: center bottom;
   background-repeat: no-repeat;
-  float: left;
+  position: absolute;
+  left: 0;
 
 .container {
   width: 100%;

@@ -10,47 +10,50 @@ $break-large: 1200px;
 $secondary-color: #333;
 
 .il-reader {
-  .nav {
-    text-align: center;
-    color: $secondary-color;
-    font-size: smaller;
-    margin-top: 3em;
 
-    ul {
-      list-style: none;
-      padding: 1em 0 0 0;
-      list-style-type: none;
-      border-top: 4px solid #ff3333;
-      width: 300px;
-      margin: 0 auto;
-
-      @media screen and (max-width: $break-small) {
-        width: auto;
-      }
-
-      li {
-        display: inline;
-      }
-
-      .prev {
-        float: left;
-      }
-
-      .next {
-        float: right;
-      }
-    }
-  }
+  margin-top: 0;
 
   .container {
-    margin: 0 auto;
-    float: left;
+    margin: 0;
+    padding-left: 275px;
 
     @media screen and (max-width: $break-small) {
       width: auto;
     }
     @media screen and (min-width: $break-large) {
       width: 600px;
+    }
+
+    .nav {
+    text-align: center;
+    color: $secondary-color;
+    font-size: smaller;
+    margin-top: 3em;
+
+      ul {
+        list-style: none;
+        padding: 1em 0 0 0;
+        list-style-type: none;
+        border-top: 4px solid #ff3333;
+        width: 300px;
+        margin: 0 auto;
+
+        @media screen and (max-width: $break-small) {
+          width: auto;
+        }
+
+        li {
+          display: inline;
+        }
+
+        .prev {
+          float: left;
+        }
+
+        .next {
+          float: right;
+        }
+      }
     }
   }
 
@@ -68,16 +71,18 @@ $secondary-color: #333;
     </div>
 
     <div class="container">
+      <div class="text">
       <reader-view :content="content"/>
-    </div>
-
-    <div class="nav">
+      </div>
+      <div class="nav">
       <ul>
        <li class="prev"><a v-on:click="prev"><img src="/images/icon-hand-back.png"/></a></li>
        <li class="next"><a v-on:click="next"><img src="/images/icon-hand-next.png"/></a></li>
       </ul>
-    </div>
+      </div>
     <div class="clear"></div>
+    </div>
+
   </div>
 </template>
 
