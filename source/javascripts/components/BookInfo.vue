@@ -11,7 +11,8 @@
 		width:100%;
 		height:100%;
 		color:$color-gray;
-		line-height:1.6em;
+		font-size:16px;
+		line-height:1.3em;
 		background:#fdfaee;
 	}
 
@@ -65,21 +66,18 @@
 	}
 
 	.title {
-		font-size:36px;
+		font-size:30px;
 	}
 
 	.author {
-		font-size:24px;
+		font-size:18px;
+		margin-top:12px;
 	}
 
 	#details ul {
 		float:left;
 		list-style-type:none;
 		padding:0;
-	}
-
-	#details ul .value {
-		padding-left:4px;
 	}
 
 	#about {
@@ -90,7 +88,7 @@
 	}
 
 	#about .header {
-		font-size:24px;
+		font-weight:bold;
 		padding-top:30px;
 	}
 
