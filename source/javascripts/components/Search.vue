@@ -1,3 +1,10 @@
+<style lang="scss" scoped>
+#search { 
+	display: inline-block;
+	width: 49%;
+} 
+</style>
+
 <template lang="jade">
 #search
   input
