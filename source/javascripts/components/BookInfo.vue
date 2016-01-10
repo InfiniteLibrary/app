@@ -1,10 +1,18 @@
-<style type='text/css' scoped>
+<style lang='scss' scoped>
+
+	$break-small:600px;
+	$break-large:900px;
+
+	$color-gray:#676767;
+	$color-red:#ff3333;
 
 	#container {
 		float:left;
 		width:100%;
 		height:100%;
-		background:white;
+		color:$color-gray;
+		line-height:1.6em;
+		background:#fdfaee;
 	}
 
 	#bookHolder {
@@ -15,9 +23,8 @@
 
 	#coverHolder {
 		float:left;
-		width:300px;
-		height:500px;
-		margin:30px;
+		width:350px;
+		margin:20px 20px 20px 45px;
 	}
 
 	#cover {
@@ -27,32 +34,30 @@
 	}
 
 	#controls {
-		width:100%;
+		width:150px;
 		height:60px;
 	}
 
 	.btn {
+		float:left;
 		cursor:pointer;
 		color:white;
-		padding:12px 30px;
-		background:green;
+		width:35px;
+		height:36px;
+		margin:9px 6px 0 0;
 	}
-	.btn:first-child {
-		float:left;
+	.btn#read {
+		background:url(/images/icon-readnow.png) 0 0;
 	}
-	.btn:last-child {
-		float:right;
-	}
-	.btn span {
-		float:left;
-		text-align:center;
+	.btn#add {
+		background:url(/images/icon-addtomylibrary.png) 0 0;
 	}
 
 	#details {
+		background:#fff;
 		float:left;
-		width:400px;
-		height:400px;
-		padding-top:30px;
+		margin:20px 0;
+		padding:30px;
 	}
 
 	#details .meta {
@@ -60,16 +65,15 @@
 	}
 
 	.title {
-		font-size:40px;
+		font-size:36px;
 	}
 
 	.author {
-		font-size:28px;
+		font-size:24px;
 	}
 
 	#details ul {
 		float:left;
-		font-size:18px;
 		list-style-type:none;
 		padding:0;
 	}
@@ -80,10 +84,8 @@
 
 	#about {
 		float:left;
-		background:#eee;
 		width:100%;
-		min-height:300px;
-		margin:0;
+		margin:0 0 45px 0;
 		padding:0;
 	}
 
@@ -92,41 +94,45 @@
 		padding-top:30px;
 	}
 
-	#about .description {
-		padding-top:15px;
-	}
-
 	#about .header,
 	#about .description {
 		float:left;
 		width:100%;
 	}
 
-	#about span {
-		padding-left:30px;
-	}
+	@media screen and (max-width: $break-small) {
+    	#container {
+    		width:100%;
+    	}
+   	}
+   	@media screen and (min-width: $break-large) {
+    	#container {
+    		width:100%;
+    	}
+   	}
+
 </style>
 <template>
 	<div id='container'>
 		<div id='bookHolder'>
 			<div id='coverHolder'>
 				<a href=''><img id='cover' :src='coverURL'/></a>
-				<div id='controls'>
-					<div class='btn'><span>Read</span></div>
-					<div class='btn'><span>+/-</span></div>
-				</div>
 			</div>
 			<div id='details'>
 				<div class='meta title'>{{ metadata.title }}</div>
 				<div class='meta author'>{{ metadata.author }}</div>
+				<div id='controls'>
+					<div id='read' class='btn'></div>
+					<div id='add' class='btn'></div>
+				</div>
 				<ul>
 					<li v-for="subject in metadata.subj">{{subject}}</li>
 				</ul>
+				<div id='about'>
+					<div class='header'><span>About</span></div>
+					<div class='description'><span>Lorem ipsum dolor sit amet</span></div>
+				</div>
 			</div>
-		</div>
-		<div id='about'>
-			<div class='header'><span>About</span></div>
-			<div class='description'><span>Lorem ipsum dolor sit amet</span></div>
 		</div>
 	</div>
 </template>
