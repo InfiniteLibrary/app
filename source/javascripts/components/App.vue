@@ -1,8 +1,9 @@
-<template lang="jade">
-#app
-  app-bar(msg = "This is passed from the parent")
-  search
-  router-view
+<template>
+<div id="app">
+  <header/>
+  <app-content/>
+  <footer/>
+</div>
 </template>
 
 <script>
