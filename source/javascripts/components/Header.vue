@@ -14,13 +14,21 @@
 <template>
 <div class="header">
   <img class="logo"/>
-  <h1>App Title</h1>
+  <h1>This is the header</h1>
   <h2>App description</h2>
 </div>
 </template>
 
 <script>
+import Banner from "./Banner.vue";
+import Search from "./Search.vue";
+import Nav from "./Nav.vue";
+
 export default {
-  props: ['msg']
+  components: {
+    Banner,
+    Search,
+    Nav
+  }
 }
 </script>

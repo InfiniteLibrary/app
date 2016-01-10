@@ -6,16 +6,15 @@
 </template>
 
 <script>
-import AppBar from "./Header.vue";
+import Header from "./Header.vue";
 import AppContent from "./AppContent.vue";
-import Search from "./Search.vue";
-import Reader from "./Reader.vue";
+import Footer from "./Footer.vue";
 
 export default {
   components: {
     Header,
-    Search,
-    AppContent
+    AppContent, 
+    Footer
   }
 }
 </script>
