@@ -11,6 +11,7 @@ function BookWorker(url, cb) {
     });
   }
   this.spine = [];
+  this.nac = {};
 }
 // Load the book from the url
 BookWorker.prototype.load = function (url, cb) {
@@ -47,8 +48,9 @@ BookWorker.prototype.parseHtmlBook = function (doc, cb) {
   // Get all chapter sections
   var sections = doc.querySelectorAll('section');
   // Get the Table of Contents
-  var nav = doc.querySelectorAll('[data-type="toc"]');
-  var title;
+  var nav = doc.querySelector('[data-type="toc"]');
+
+  this.toc = this.nav(nav);
 
   for (i = 0; i < sections.length; i++) {
     // Add each section to the spine
@@ -73,6 +75,25 @@ BookWorker.prototype.section = function (index) {
   if(this.loaded && index >= 0 && index < this.spine.length - 1 ){
     return this.spine[index];
   }
+};
+
+BookWorker.prototype.nav = function(navElement){
+	var navItems = navElement.querySelectorAll("ol li");
+	var length = navItems.length;
+	var i;
+	var toc = [];
+	var item, parent;
+
+	if(!navItems || length === 0) return list;
+
+	for (i = 0; i < length; ++i) {
+		item = navItems[i].querySelector("a");
+		toc.push({
+      index: i,
+      title: item.textContent
+		});
+	}
+	return toc;
 };
 
 
