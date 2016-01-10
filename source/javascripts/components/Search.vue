@@ -2,6 +2,11 @@
 #search { 
 	display: inline-block;
 	width: 49%;
+	text-align: right;
+	input { 
+		border-radius: 20px; 
+		padding-left: 10px;
+	} 
 } 
 </style>
 
