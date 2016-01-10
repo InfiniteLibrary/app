@@ -14,6 +14,7 @@
 <template>
 <header-banner></header-banner>
 <header-nav></header-nav>
+<header-search></header-search>
 </template>
 
 <script>
