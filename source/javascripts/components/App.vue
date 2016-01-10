@@ -1,6 +1,7 @@
 <template lang="jade">
 #app
   app-bar(msg = "This is passed from the parent")
+  search
   router-view
 </template>
 
@@ -8,6 +9,7 @@
 import AppBar from "./AppBar.vue";
 import AppContent from "./AppContent.vue";
 import Search from "./Search.vue";
+import Reader from "./Reader.vue";
 
 export default {
   components: {
