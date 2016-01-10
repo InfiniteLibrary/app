@@ -1,6 +1,6 @@
 <template lang="jade">
 #search
-  input(v-model="query")
+  input
   button(@click="fetchData") Search GITenberg!
   ul
     li(v-for="result in results")
@@ -24,13 +24,12 @@ export default {
   // },
   methods: {
     fetchData: function() {
-      var url = "https://api.github.com/search/repositories?q="
-                + this.query + "+user:GITenberg";
+      var url = "https://api.github.com/orgs/InfiniteLibraryLibrary/repos"
       var xhr = new XMLHttpRequest();
       var self = this;
       xhr.open('GET', url);
       xhr.onload = function() {
-        self.$set('results', JSON.parse(xhr.responseText).items);
+        self.$set('results', JSON.parse(xhr.responseText));
         console.log(JSON.parse(xhr.responseText));
       }
       xhr.send();
