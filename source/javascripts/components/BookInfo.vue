@@ -123,7 +123,7 @@
 				<div class='meta title'>{{ metadata.title }}</div>
 				<div class='meta author'>{{ metadata.author }}</div>
 				<div id='controls'>
-					<a id='read' class='btn' v-link="reader/{{ this.githubUser }}/{{ $route.params.bookID  }}"></a>
+					<a id='read' class='btn' v-link="{ name: 'reader', params: { user: githubUser, repo:$route.params.bookID }}"></a>
 					<div id='add' class='btn'></div>
 				</div>
 				<ul>
