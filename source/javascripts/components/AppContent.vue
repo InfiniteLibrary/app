@@ -29,21 +29,8 @@ $body-text-size: 1.25em;
 }
 </style>
 
-<template lang="jade">
-.app-content
-  .content-header
-    h1 {{ message }}
-  .content-body
-    p.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-      consequat maximus dolor, id tempor metus molestie in. Nulla ac velit sed
-      mauris venenatis convallis ac a sem. Curabitur condimentum ultricies quam,
-      ut finibus metus laoreet ut. Sed ac placerat augue, sed rhoncus lorem.
-      Nunc sapien turpis, placerat fermentum quam quis, condimentum rutrum nisi.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec magna
-      ultricies enim venenatis commodo.
-    p Another paragraph
-    p Annnnnd anohter one
+<template>
+  hello
 </template>
 
 <script>
