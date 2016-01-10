@@ -4,6 +4,7 @@
   search
   app-content
   reader(src = "http://localhost:4567/htmlbooks/dubliners.xhtml")
+  router-view
 </template>
 
 <script>
