@@ -4,18 +4,43 @@ $top-bar-bg-color: #40A5C7;
 $top-bar-text-color: #FFF;
 $top-bar-height: 2.5rem;
 // Component styles
-.app-bar {
-  background-color: $top-bar-bg-color;
-  color: $top-bar-text-color;
-  height: $top-bar-height;
-  line-height: $top-bar-height;
-  text-align: center;
+.topnav {
+
+  border-bottom: 1px solid #333;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-position: inside;
+  }
+
+  li {
+    display: inline;
+  }
+
+}
+
+.logo {
+  display: inline;
+}
+
+h1 {
+  display: inline;
 }
 </style>
 
-<template lang="jade">
-.app-bar
-  span {{ msg }}
+<template>
+<div class="header">
+  <img class="logo"/>
+  <h1>App Title</h1>
+  <h2>App description</h2>
+  <ul class="topnav">
+    <li>target</li>
+    <li>target</li>
+    <li>target</li>
+  </ul>
+</div>
 </template>
 
 <script>
