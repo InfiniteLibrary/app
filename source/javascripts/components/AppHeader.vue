@@ -25,7 +25,7 @@ import HeaderSearch from "./HeaderSearch.vue";
 export default {
   components: {
     HeaderBanner,
-    HeaderNav,
+    HeaderNav
     HeaderSearch
   }
 }
