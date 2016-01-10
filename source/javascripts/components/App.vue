@@ -16,7 +16,7 @@ export default {
   components: {
     AppBar,
     Search,
-    AppContent
+    AppContent,
     Reader
   }
 }
