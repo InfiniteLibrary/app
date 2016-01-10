@@ -1,8 +1,7 @@
 <template lang="jade">
 #app
   app-bar(msg = "This is passed from the parent")
-  search
-  app-content
+  router-view
 </template>
 
 <script>
