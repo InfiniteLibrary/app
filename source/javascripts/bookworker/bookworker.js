@@ -89,7 +89,7 @@ BookWorker.prototype.nav = function(navElement){
 	for (i = 0; i < length; ++i) {
 		item = navItems[i].querySelector("a");
 		toc.push({
-      index: i,
+      index: i+1,
       title: item.textContent
 		});
 	}
