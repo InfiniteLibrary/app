@@ -1,8 +1,4 @@
 <style lang="scss" scoped>
-// Variables
-$top-bar-bg-color: #40A5C7;
-$top-bar-text-color: #FFF;
-$top-bar-height: 2.5rem;
 // Component styles
 .header {
   .navbar {
