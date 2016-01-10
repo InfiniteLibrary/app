@@ -20,13 +20,11 @@
 <script>
 import HeaderBanner from "./HeaderBanner.vue";
 import HeaderNav from "./HeaderNav.vue";
-import HeaderSearch from "./HeaderSearch.vue";
 
 export default {
   components: {
     HeaderBanner,
     HeaderNav
-    HeaderSearch
   }
 }
 </script>
