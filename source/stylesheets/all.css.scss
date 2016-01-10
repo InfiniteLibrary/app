@@ -1,2 +1,6 @@
 @import "normalize";
+@import "typographic";
 @import "global";
+
+
+@include typographic();
