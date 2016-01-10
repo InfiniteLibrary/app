@@ -50,7 +50,7 @@ BookWorker.prototype.parseHtmlBook = function (doc, cb) {
   // Get the Table of Contents
   var nav = doc.querySelector('[data-type="toc"]');
 
-  var toc = this.nav(nav);
+  this.toc = this.nav(nav);
 
   for (i = 0; i < sections.length; i++) {
     // Add each section to the spine

@@ -62,44 +62,12 @@ $secondary-color: #333;
 <template>
   <div class="il-reader">
 
+    <div class="contents">
+      <reader-contents :items="toc"/>
+    </div>
+
     <div class="container">
-      <section data-type="chapter" data-pdf-bookmark="Chapter 3. ETYMOLOGY." id="idm215364907872">
-<h1>ETYMOLOGY.</h1>
-
-
-<p>(Supplied by a Late Consumptive Usher to a Grammar School)</p>
-
-<p>The pale Usher—threadbare in coat, heart, body, and brain; I see him
-now. He was ever dusting his old lexicons and grammars, with a queer
-handkerchief, mockingly embellished with all the gay flags of all the
-known nations of the world. He loved to dust his old grammars; it
-somehow mildly reminded him of his mortality.</p>
-
-<p>"While you take in hand to school others, and to teach them by what name
-a whale-fish is to be called in our tongue leaving out, through
-ignorance, the letter H, which almost alone maketh the signification of
-the word, you deliver that which is not true." —HACKLUYT</p>
-
-<p>"WHALE…. Sw. and Dan. HVAL. This animal is named from roundness or
-rolling; for in Dan. HVALT is arched or vaulted." —WEBSTER’S DICTIONARY</p>
-
-<p>"WHALE…. It is more immediately from the Dut. and Ger. WALLEN; A.S.
-WALW-IAN, to roll, to wallow." —RICHARDSON’S DICTIONARY</p>
-<blockquote>
-<pre>     KETOS,               GREEK.
-     CETUS,               LATIN.
-     WHOEL,               ANGLO-SAXON.
-     HVALT,               DANISH.
-     WAL,                 DUTCH.
-     HWAL,                SWEDISH.
-     WHALE,               ICELANDIC.
-     WHALE,               ENGLISH.
-     BALEINE,             FRENCH.
-     BALLENA,             SPANISH.
-     PEKEE-NUEE-NUEE,     FEGEE.
-     PEHEE-NUEE-NUEE,     ERROMANGOAN.</pre></blockquote>
-</section>
-      <view :content="content"/>
+      <reader-view :content="content"/>
     </div>
 
     <div class="nav">
@@ -113,19 +81,22 @@ WALW-IAN, to roll, to wallow." —RICHARDSON’S DICTIONARY</p>
 </template>
 
 <script>
-import View from "./View.vue";
+import ReaderView from "./View.vue";
+import ReaderContents from "./Contents.vue";
 import BookWorker from "../bookworker/bookworker.js";
 
 export default {
   props: ['src'],
   components: {
-    View
+    ReaderView,
+    ReaderContents
   },
 
   data: function() {
     return {
       content: '',
-      curr: 0
+      curr: 0,
+      toc: []
     }
   },
 
@@ -162,6 +133,9 @@ export default {
         if (section) {
           this.content = section.contents();
         }
+
+        this.toc = this.book.toc;
+        // console.log(this.toc);
       })
 
 
