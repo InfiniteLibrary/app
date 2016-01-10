@@ -13,20 +13,20 @@
 
 <template>
 <header-banner></header-banner>
-<header-search></header-search>
 <header-nav></header-nav>
+<header-search></header-search>
 </template>
 
 <script>
 import HeaderBanner from "./HeaderBanner.vue";
-import HeaderSearch from "./HeaderSearch.vue";
 import HeaderNav from "./HeaderNav.vue";
+import HeaderSearch from "./HeaderSearch.vue";
 
 export default {
   components: {
     HeaderBanner,
-    HeaderSearch,
-    HeaderNav
+    HeaderNav,
+    HeaderSearch
   }
 }
 </script>
