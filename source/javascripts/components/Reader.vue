@@ -37,7 +37,7 @@ export default {
 
   methods: {
     fetchData: function () {
-      var bookid = this.$route.params.bookid;
+      var bookid = this.$route.params.bookID;
 
       // var xhr = new XMLHttpRequest()
       //

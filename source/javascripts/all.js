@@ -16,7 +16,7 @@ router.map({
   '/': {
     component: Home
   },
-  '/reader/:bookid': {
+  '/reader/:bookID': {
     name: 'reader', // give the route a name
     component: Reader
   }
