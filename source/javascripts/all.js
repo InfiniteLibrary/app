@@ -16,6 +16,7 @@ var router = new Router();
 
 router.map({
   '/': {
+    name: 'home',
     component: Home
   },
   '/bookinfo/:bookID': {

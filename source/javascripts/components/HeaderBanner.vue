@@ -9,6 +9,6 @@ header {
 </style>
 <template>
 	<header>
-	<img class="logo" src="/images/Title-Logo.png"/>
+	<a v-link="{ name: 'home' }"><img class="logo" src="/images/Title-Logo.png"/></a>
 	</header>
 </template>
