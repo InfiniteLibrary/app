@@ -14,6 +14,9 @@ export default {
   props: {
     'items': {
       type: Array
+    },
+    'index': {
+      type: Number
     }
   },
   created: function () {
@@ -21,7 +24,9 @@ export default {
   },
   methods: {
     goto: function (e) {
-      console.log(e)
+      var a = e.target;
+      var index = a.getAttribute("data-index");
+      this.index = parseInt(index);
     }
   }
 }

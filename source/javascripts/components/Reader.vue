@@ -63,7 +63,7 @@ $secondary-color: #333;
   <div class="il-reader">
 
     <div class="contents">
-      <reader-contents :items="toc"/>
+      <reader-contents :items="toc" :index.sync="curr"/>
     </div>
 
     <div class="container">
@@ -104,9 +104,9 @@ export default {
     this.fetchRepo()
   },
 
-  // watch: {
-  //  curr: 'section'
-  // },
+  watch: {
+   curr: 'section'
+  },
 
   methods: {
     fetchRepo: function (bookID, cb) {
@@ -154,7 +154,6 @@ export default {
     prev: function() {
       if(this.curr > 0){
         this.curr -= 1;
-        this.section();
       }
     }
   }
