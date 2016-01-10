@@ -117,7 +117,7 @@
 	<div id='container'>
 		<div id='bookHolder'>
 			<div id='coverHolder'>
-				<a href=''><img id='cover' :src='coverURL'/></a>
+				<a v-link="{ name: 'reader', params: { user: githubUser, repo:$route.params.bookID }}"><img id='cover' :src='coverURL'/></a>
 			</div>
 			<div id='details'>
 				<div class='meta title'>{{ metadata.title }}</div>
