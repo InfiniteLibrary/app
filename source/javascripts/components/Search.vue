@@ -7,9 +7,11 @@
 	       input { 
 		       border-radius: 20px; 
 		       padding-left: 10px;
+		       border: 2px solid #999;
 	       } 
 	       button { 
 		       font-size: 12px;
+		       margin: 2px auto;
 	       } 
 	}
 } 
