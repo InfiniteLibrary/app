@@ -20,6 +20,10 @@ router.map({
   '/reader/:bookID': {
     name: 'reader', // give the route a name
     component: Reader
+  },
+  // Redirect unmatched routes to Home
+  '*': {
+    component: Home
   }
 });
 
