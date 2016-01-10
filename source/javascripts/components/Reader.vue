@@ -61,9 +61,10 @@ $secondary-color: #333;
 </style>
 
 <template>
+
   <div class="il-reader">
 
-    <a v-on:click="toggleToc">toggle Toc</a>
+    <!-- <a v-on:click="toggleToc">toggle Toc</a> -->
 
     <div class="contents">
       <reader-contents :items="toc" :index.sync="curr" v-show="showToc"/>
@@ -87,12 +88,14 @@ $secondary-color: #333;
 import ReaderView from "./View.vue";
 import ReaderContents from "./Contents.vue";
 import BookWorker from "../bookworker/bookworker.js";
+import HeaderNav from "./HeaderNav.vue";
 
 export default {
   props: ['src'],
   components: {
     ReaderView,
-    ReaderContents
+    ReaderContents,
+    HeaderNav
   },
 
   data: function() {
@@ -100,7 +103,7 @@ export default {
       content: '',
       curr: 0,
       toc: [],
-      showToc: false
+      showToc: true
     }
   },
 

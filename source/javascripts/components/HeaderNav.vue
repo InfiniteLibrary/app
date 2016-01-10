@@ -1,7 +1,7 @@
 <style lang="scss" scoped>
 // Component styles
 .nav {
-  border-left: 17px solid #EC2028; 
+  border-left: 17px solid #EC2028;
   .navbar {
     ul {
       margin: 0;
@@ -11,9 +11,9 @@
     }
     li {
       display: inline;
-      &:active { 
-        border-bottom: 5px solid #EC2028; 
-      } 
+      &:active {
+        border-bottom: 5px solid #EC2028;
+      }
     }
 
   }
