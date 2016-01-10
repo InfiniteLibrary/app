@@ -57,6 +57,8 @@
 	#details {
 		background:#fff;
 		float:left;
+		width:600px;
+		height:352px;
 		margin:20px 0;
 		padding:30px;
 	}
@@ -77,6 +79,7 @@
 	#details ul {
 		float:left;
 		list-style-type:none;
+		margin:0;
 		padding:0;
 	}
 
@@ -128,7 +131,7 @@
 				</ul>
 				<div id='about'>
 					<div class='header'><span>About</span></div>
-					<div class='description'><span>Lorem ipsum dolor sit amet</span></div>
+					<div class='description'><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque orci leo, convallis non tincidunt ac, efficitur vitae risus. Vestibulum pharetra eleifend mauris, et vulputate libero luctus sagittis. Sed vitae metus lorem. Curabitur eu pulvinar lectus, nec consequat urna. Cras ac massa eu sapien tempus imperdiet. Suspendisse potenti. Duis sem purus, auctor at quam euismod, laoreet mattis augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum urna orci, vehicula nec volutpat in, semper sit amet tortor. Praesent eleifend et dui eu scelerisque. Phasellus sit amet ligula at massa blandit rutrum.</span></div>
 				</div>
 			</div>
 		</div>
