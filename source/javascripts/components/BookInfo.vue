@@ -58,7 +58,7 @@
 		background:#fff;
 		float:left;
 		width:600px;
-		height:352px;
+		min-height:350px;
 		margin:20px 0;
 		padding:30px;
 	}
