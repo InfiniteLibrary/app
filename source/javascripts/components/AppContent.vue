@@ -47,11 +47,11 @@ $body-text-size: 1.25em;
 </template>
 
 <script>
+import Reader from "./Reader.vue";
+
 export default {
-  data() {
-    return {
-      message: "Hello world!"
-    }
+  components: {
+    Reader
   }
 }
 </script>
