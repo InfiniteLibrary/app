@@ -28,7 +28,7 @@ export default {
   },
 
   created: function () {
-    this.fetchData()
+    this.fetchRepo()
   },
 
   // watch: {
@@ -36,19 +36,25 @@ export default {
   // },
 
   methods: {
-    fetchData: function () {
-      var bookid = this.$route.params.bookID;
-
-      // var xhr = new XMLHttpRequest()
-      //
-      // xhr.open('GET', "https://api.github.com/search/repositories?q="+ this.repos + "+user:GITenberg")
+    fetchRepo: function (bookID, cb) {
+      var user = this.$route.params.user;
+      var repo = this.$route.params.repo;
+      var xhr = new XMLHttpRequest();
+      this.fetchBook("https://raw.githubusercontent.com/"+ user + "/" + repo + "/master/book.xhtml");
+      // xhr.open('GET', "https://api.github.com/repos/"+ user + "/" + repo +  "/contents/book.xhtml")
       // xhr.onload = function () {
-      //   this.process(xhr.responseText, cb);
+      //   var result = JSON.parse(xhr.responseText);
+      //   if(result.download_url) {
+      //     this.fetchBook(result.download_url, cb);
+      //   }
       // }.bind(this);
       // xhr.send()
+    },
+    fetchBook: function (url) {
+      var xhr = new XMLHttpRequest()
 
-      this.book = new BookWorker(this.src, (text) => {
-        console.log(this.curr);
+      this.book = new BookWorker(url, (text) => {
+
         var section = this.book.section(this.curr);
 
         if (section) {
