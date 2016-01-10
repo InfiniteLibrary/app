@@ -16,7 +16,7 @@
 	#coverHolder {
 		float:left;
 		width:300px;
-		height:400px;
+		height:500px;
 		margin:30px;
 	}
 
@@ -121,12 +121,6 @@
 				<div class='meta author'>{{ metadata.author }}</div>
 				<ul>
 					<li v-for="subject in metadata.subj">{{subject}}</li>
-
-
-					<!--<li id='category'><span class='key'>Category:</span><span class='value'>NULL</span></li>
-					<li id='isbn'><span class='key'>ISBN:</span><span class='value'>NULL</span></li>
-					<li id='copyright'><span class='key'>Copyright:</span><span class='value'>NULL</span></li>
-					<li id='wordcount'><span class='key'>Wordcount:</span><span class='value'>NULL</span></li>-->
 				</ul>
 			</div>
 		</div>
