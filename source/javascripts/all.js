@@ -18,7 +18,8 @@ router.map({
   '/': {
     component: Home
   },
-  '/bookinfo': {
+  '/bookinfo/:bookID': {
+    name: 'bookinfo',
     component: BookInfo
   },
   '/reader/:bookID': {

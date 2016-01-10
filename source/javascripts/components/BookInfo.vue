@@ -139,19 +139,22 @@
 export default {
 	data(){
 		return {
-			bookID:'GITenberg/Frankenstein_84',
+			githubUser: 'InfiniteLibraryLibrary',
 			metadata:{}
 		}
 	},
 	computed:{
 		coverURL:function(){
-			var url = "https://raw.githubusercontent.com/" + this.bookID + "/master/cover.jpg";
+			var url = "https://raw.githubusercontent.com/"
+				+ this.githubUser + '/'
+				+ this.$route.params.bookID + "/master/cover.jpg";
 			return url;
 		}
 	},
 	methods:{
 		getBook:function(){
-			var url = "https://api.github.com/repos/" + this.bookID;
+			var repoName = this.githubUser + '/' + this.$route.params.bookID;
+			var url = "https://api.github.com/repos/" + repoName;
 	      	var xhr = new XMLHttpRequest();
 	      	var self = this;
 	      	xhr.open('GET', url);
@@ -162,7 +165,7 @@ export default {
 	      	xhr.send();
 		},
 		getMetadata:function(){
-			var url = "https://raw.githubusercontent.com/" + this.bookID + "/master/metadata.json";
+			var url = "https://raw.githubusercontent.com/" + this.githubUser + '/' + this.$route.params.bookID + "/master/metadata.json";
 	      	var xhr = new XMLHttpRequest();
 	      	var self = this;
 	      	xhr.open('GET', url);
