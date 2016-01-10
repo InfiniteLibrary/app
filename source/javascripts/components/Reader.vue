@@ -44,6 +44,7 @@ $secondary-color: #333;
 
   .container {
     margin: 0 auto;
+    float: left;
 
     @media screen and (max-width: $break-small) {
       width: auto;
