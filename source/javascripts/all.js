@@ -7,6 +7,7 @@ const AppHeader = require('./components/AppHeader.vue');
 const AppFooter = require('./components/AppFooter.vue');
 const Reader = require('./components/Reader.vue');
 const Home = require('./components/Home.vue');
+const BookInfo = require('./components/BookInfo.vue');
 
 Vue.use(require('vue-resource'));
 Vue.use(Router);
@@ -16,6 +17,10 @@ var router = new Router();
 router.map({
   '/': {
     component: Home
+  },
+  '/bookinfo/:bookID': {
+    name: 'bookinfo',
+    component: BookInfo
   },
   '/reader/:user/:repo': {
     name: 'reader', // give the route a name

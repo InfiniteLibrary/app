@@ -1,10 +1,23 @@
+<style lang="scss" scoped>
+#search { 
+	display: inline-block;
+	width: 49%;
+	text-align: right;
+	input { 
+		border-radius: 20px; 
+		padding-left: 10px;
+	} 
+} 
+</style>
+
 <template lang="jade">
 #search
   input
   button(@click="fetchData") Search GITenberg!
   ul
     li(v-for="result in results")
-      h3 {{ result.id }} | {{ result.name }}
+      a(v-link="{ name: 'bookinfo', params: { bookID: result.name }}")
+         h3 {{ result.name }}
       p {{ result.description }}
 </template>
 

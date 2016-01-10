@@ -10,6 +10,7 @@
 import AppHeader from "./AppHeader.vue";
 import AppFooter from "./AppFooter.vue";
 import Home from "./Home.vue";
+import BookInfo from "./BookInfo.vue";
 
 export default {
   components: {
