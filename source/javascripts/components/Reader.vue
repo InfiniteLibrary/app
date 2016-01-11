@@ -161,10 +161,12 @@ export default {
     },
     next: function() {
       this.curr += 1;
+      scroll(0,0);
     },
     prev: function() {
       if(this.curr > 0){
         this.curr -= 1;
+        scroll(0,0);
       }
     },
     toggleToc: function (argument) {
